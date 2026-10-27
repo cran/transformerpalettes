@@ -1,0 +1,18 @@
+citHeader("To cite transformerpalettes in publications, please use the reference below and credit the source of the colors you used (see ?tf_credit):")
+
+year <- sub("-.*", "", meta$`Date/Publication`)
+if (is.null(year) || length(year) == 0L || is.na(year)) year <- format(Sys.Date(), "%Y")
+
+bibentry(
+  bibtype = "Manual",
+  title   = "transformerpalettes: Color Palettes Inspired by Generation 1 Transformers",
+  author  = person("Brian", "Maitner"),
+  year    = year,
+  note    = paste("R package version", meta$Version),
+  url     = "https://bmaitner.github.io/transformerpalettes/",
+  textVersion = paste0(
+    "Maitner, B. (", year, "). transformerpalettes: Color Palettes Inspired by ",
+    "Generation 1 Transformers. R package version ", meta$Version, ". ",
+    "https://bmaitner.github.io/transformerpalettes/"
+  )
+)
